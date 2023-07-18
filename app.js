@@ -13,3 +13,11 @@ app.listen(3000, function () {
 app.get("/", function (req,res) {
     res.sendFile(__dirname + "/signup.html");
 })
+
+app.post("/", function (req,res) {
+    var fname = req.body.fname;
+    var lname = req.body.lname;
+    var ename = req.body.ename;
+
+    console.log(fname);
+})
