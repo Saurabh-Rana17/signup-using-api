@@ -18,6 +18,12 @@ app.post("/", function (req,res) {
     var fname = req.body.fname;
     var lname = req.body.lname;
     var ename = req.body.ename;
+    
 
-    console.log(fname);
 })
+
+//api key
+//885fcf2f5f1c52744c99a09f98d843c1-us10
+
+// id
+//15d03aa077
