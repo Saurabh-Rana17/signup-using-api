@@ -24,7 +24,7 @@ body {
   border-radius: 0;
 }
 
-.bottom[type="password"] {
+.bottom {
   margin-bottom: 10px;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
