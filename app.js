@@ -6,6 +6,7 @@ const request = require("request");
 const app = express();
 const https = require("https");
 const { dirname } = require("path");
+const { log } = require("console");
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
@@ -62,4 +63,4 @@ app.post("/failure", function (req,res) {
     res.redirect("/");
 })
 
-
+console.log(process.env.apiKey);
