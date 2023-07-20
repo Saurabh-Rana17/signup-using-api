@@ -4,13 +4,22 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Failure</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
   </head>
   <body>
     <img
       src="https://cdn.presslabs.com/wp-content/uploads/2018/03/custom-error-pages.png"
       alt="fail to load"
-      width="100%"
-      height="100%"
+      width="50%"
+      height="50%"
     />
+    <form action="/failure" method="post">
+      <button type="submit" class="btn btn-danger">Try Again</button>
+    </form>
   </body>
 </html>
