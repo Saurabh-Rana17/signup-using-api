@@ -63,4 +63,3 @@ app.post("/failure", function (req,res) {
     res.redirect("/");
 })
 
-console.log(process.env.apiKey);
