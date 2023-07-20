@@ -16,22 +16,26 @@ app.get("/", function (req,res) {
 })
 
 app.post("/", function (req,res) {
-    var fname = req.body.fname;
-    var lname = req.body.lname;
-    var ename = req.body.ename;
-    var data = {
-        email_address: ename,
-        status: "subscribed",
-        merge_fields: {
-            FNAME : fname,
-            LNAME : lname
-        }
+    const fname = req.body.fname;
+    const lname = req.body.lname;
+    const ename = req.body.ename;
+    const data = {
+        members: [
+            {
+                email_address: ename,
+                status: "subscribed",
+                merge_fields: {
+                    FNAME: fname,
+                    LNAME: lname
+                }
+            }
+    ]
     }
-    var jsonData = JSON.stringify(data);
+    const jsonData = JSON.stringify(data);
     var url = "https://us10.api.mailchimp.com/3.0/lists/15d03aa077"; 
     const option = {
         method : "POST",
-        auth : "Saurabh:885fcf2f5f1c52744c99a09f98d843c1-us10"
+        auth : "Saurabh:e026ee3118bcafa81ed66664ce0d89d5-us10"
     }
     const request = https.request(url, option, function (response) {
         response.on("data", function (data) {
@@ -44,7 +48,7 @@ app.post("/", function (req,res) {
 })
 
 //api key
-//885fcf2f5f1c52744c99a09f98d843c1-us10
+//e026ee3118bcafa81ed66664ce0d89d5-us10
 
 //list id
 //15d03aa077
